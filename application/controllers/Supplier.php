@@ -102,7 +102,7 @@ class Supplier extends CI_Controller
 
         if ($row) {
             $data = array(
-                'judul_page' => 'supplier/supplier_form',
+                'judul_page' => 'Update Supplier',
                 'konten' => 'supplier/supplier_form',
                 'button' => 'Update',
                 'action' => site_url('supplier/update_action'),

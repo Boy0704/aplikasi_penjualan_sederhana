@@ -29,9 +29,21 @@
         <?php if ($this->session->userdata('level') == 'admin'){ ?>
         <li><a href="app"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
         <li><a href="Supplier"><i class="fa fa-clone"></i> <span> Supplier</span></a></li></li>
-        <li><a href="Produk"><i class="fa fa-clone"></i> <span> Produk </span></a></li></li>
+        <li><a href="Produk?konten_manual"><i class="fa fa-clone"></i> <span> Produk </span></a></li></li>
         <li><a href="Stok"><i class="fa fa-clone"></i> <span> Stok </span></a></li></li>
-        <li><a href="Transaksi"><i class="fa fa-file"></i> <span> Transaksi </span></a></li></li>
+        <li class="treeview" style="height: auto;">
+          <a href="#">
+            <i class="fa fa-pie-chart"></i>
+            <span>Transaksi</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu" style="display: none;">
+            <li><a href="penjualan"><i class="fa fa-circle-o"></i> Penjualan</a></li>
+            <li><a href="pengeluaran"><i class="fa fa-circle-o"></i> Pengeluaran</a></li>
+          </ul>
+        </li>
 
         <li><a href="Laporan"><i class="fa fa-print"></i> <span> Laporan </span></a></li></li>
 
@@ -41,7 +53,24 @@
         <?php } elseif ($this->session->userdata('level') == 'user') {?>
 
         <li><a href="app"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-        <li><a href="Agreement?&id_user=<?php echo $this->session->userdata('id_user'); ?>"><i class="fa fa-clone"></i> <span>Online Agreement  </span></a></li></li>
+        <li><a href="Supplier"><i class="fa fa-clone"></i> <span> Supplier</span></a></li></li>
+        <li><a href="Produk?konten_manual"><i class="fa fa-clone"></i> <span> Produk </span></a></li></li>
+        <li><a href="Stok"><i class="fa fa-clone"></i> <span> Stok </span></a></li></li>
+        <li class="treeview" style="height: auto;">
+          <a href="#">
+            <i class="fa fa-pie-chart"></i>
+            <span>Transaksi</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu" style="display: none;">
+            <li><a href="penjualan"><i class="fa fa-circle-o"></i> Penjualan</a></li>
+            <li><a href="pengeluaran"><i class="fa fa-circle-o"></i> Pengeluaran</a></li>
+          </ul>
+        </li>
+
+        <li><a href="Laporan"><i class="fa fa-print"></i> <span> Laporan </span></a></li></li>
         <?php } ?>
         
         

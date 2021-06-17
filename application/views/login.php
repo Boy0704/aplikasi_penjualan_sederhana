@@ -33,6 +33,14 @@
     </head>
 
     <body>
+        <style>
+        body {
+          background-image: url("assets/logo_pet.jpeg");
+          background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+        }
+        </style>
 
         <!-- Top content -->
         <div class="top-content">
@@ -41,9 +49,6 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
-                            <center>
-                                <img src="assets/logo_pet.jpeg" style="width: 100px;">
-                            </center>
                             <h1><strong></strong> <?php echo get_setting('nama_aplikasi') ?></h1>
                             <div class="description">
                                 
@@ -51,7 +56,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        <div class="col-sm-4 col-sm-offset-4 form-box">
                             <div class="form-top">
                                 <div class="form-top-left">
                                     <h3>Silahkan Login</h3>
@@ -87,7 +92,7 @@
         <script src="assets/login/js/jquery-1.11.1.min.js"></script>
         <script src="assets/login/bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/login/js/jquery.backstretch.min.js"></script>
-        <script src="assets/login/js/scripts.js"></script>
+        <!-- <script src="assets/login/js/scripts.js"></script> -->
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script type="text/javascript">
             // $(document).ready(function() {
