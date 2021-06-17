@@ -60,6 +60,7 @@ table.shoping-cart-table tr td:last-child {
   width: 80px;
 }
 .product-name {
+  text-align: center;
   font-size: 20px;
   font-weight: 600;
   color: #676a6c;
@@ -210,7 +211,7 @@ table.shoping-cart-table tr td:last-child {
                             <small class="text-muted"><?php echo $produk->kategori ?></small>
                            
 
-                            <div class="small m-t-xs">
+                            <div class="small m-t-xs" style="font-size: 15px">
                                 <b>Harga Beli</b> : <?php echo number_format($produk->harga_beli) ?> <br>
                                 <b>Supplier</b> : <?php echo get_data('supplier','id_supplier',$produk->id_supplier,'nama') ?> <br><br>
 
