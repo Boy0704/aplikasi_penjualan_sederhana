@@ -15,7 +15,7 @@
   text-align: center;
   /*padding: 90px 0;*/
   background-color: #f8f8f9;
-  border: 1px solid red;
+  border: 1px solid black;
   color: #bebec3;
   font-weight: 600;
 }
@@ -60,7 +60,7 @@ table.shoping-cart-table tr td:last-child {
   width: 80px;
 }
 .product-name {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   color: #676a6c;
   display: block;
@@ -196,6 +196,7 @@ table.shoping-cart-table tr td:last-child {
             <div class="col-md-3">
                 <div class="ibox">
                     <div class="ibox-content product-box">
+                        <a href="#" class="product-name"> <?php echo $produk->nama_produk ?></a>
                         <div class="product-imitation">
                             <img src="image/produk/<?php echo $produk->foto ?>" width="100%">
                         </div>
@@ -207,7 +208,7 @@ table.shoping-cart-table tr td:last-child {
                                 <?php echo number_format($produk->harga_jual) ?>
                             </span>
                             <small class="text-muted"><?php echo $produk->kategori ?></small>
-                            <a href="#" class="product-name"> <?php echo $produk->nama_produk ?></a>
+                           
 
                             <div class="small m-t-xs">
                                 <b>Harga Beli</b> : <?php echo number_format($produk->harga_beli) ?> <br>
