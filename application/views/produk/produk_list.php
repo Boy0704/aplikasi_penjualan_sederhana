@@ -70,6 +70,16 @@ table.shoping-cart-table tr td:last-child {
 .product-name:focus {
   color: #1ab394;
 }
+.product-qty {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: red;
+  padding: 6px 12px;
+  position: absolute;
+  top: -32px;
+  left: 0;
+}
 .product-price {
   font-size: 14px;
   font-weight: 600;
@@ -190,6 +200,9 @@ table.shoping-cart-table tr td:last-child {
                             <img src="image/produk/<?php echo $produk->foto ?>" width="100%">
                         </div>
                         <div class="product-desc">
+                            <span class="product-qty">
+                                <?php echo $retVal = (get_data('stok','id_produk',$produk->id_produk,'qty') != '') ? get_data('stok','id_produk',$produk->id_produk,'qty') : 'not set' ; ?>
+                            </span>
                             <span class="product-price">
                                 <?php echo number_format($produk->harga_jual) ?>
                             </span>
