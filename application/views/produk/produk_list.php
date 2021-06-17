@@ -148,16 +148,6 @@ table.shoping-cart-table tr td:last-child {
 </style>
         <div class="row" style="margin-bottom: 10px">
             <div class="col-md-4">
-                <?php echo anchor(site_url('produk/create').'?'.param_get(),'Create', 'class="btn btn-primary"'); ?>
-            </div>
-            <div class="col-md-4 text-center">
-                <div style="margin-top: 8px" id="message">
-                    <?php echo $this->session->userdata('message') <> '' ? $this->session->userdata('message') : ''; ?>
-                </div>
-            </div>
-            <div class="col-md-1 text-right">
-            </div>
-            <div class="col-md-3 text-right">
                 <form action="<?php echo site_url('produk/index'); ?>" class="form-inline" method="get">
                     <div class="input-group">
                         <input type="text" class="form-control" name="q" value="<?php echo $q; ?>">
@@ -174,6 +164,17 @@ table.shoping-cart-table tr td:last-child {
                         </span>
                     </div>
                 </form>
+            </div>
+            <div class="col-md-4 text-center">
+                <div style="margin-top: 8px" id="message">
+                    <?php echo $this->session->userdata('message') <> '' ? $this->session->userdata('message') : ''; ?>
+                </div>
+            </div>
+            <div class="col-md-1 text-right">
+            </div>
+            <div class="col-md-3 text-right">
+                <?php echo anchor(site_url('produk/create').'?'.param_get(),'Create', 'class="btn btn-primary"'); ?>
+                
             </div>
         </div>
         
