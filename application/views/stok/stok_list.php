@@ -34,7 +34,8 @@
             <tr>
                 <th>No</th>
 		<th>Produk</th>
-		<th>Qty</th>
+        <th>Qty</th>
+		<th>Supplier</th>
 		<th>Action</th>
             </tr><?php
             foreach ($stok_data as $stok)
@@ -43,7 +44,11 @@
                 <tr>
 			<td width="80px"><?php echo ++$start ?></td>
 			<td><?php echo get_data('produk','id_produk',$stok->id_produk,'nama_produk') ?></td>
-			<td><?php echo $stok->qty ?></td>
+            <td><?php echo $stok->qty ?></td>
+			<td><?php 
+            $id_supplier = get_data('produk','id_produk',$stok->id_produk,'id_supplier');
+            echo get_data('supplier','id_supplier',$id_supplier,'nama')
+             ?></td>
 			<td style="text-align:center" width="200px">
 				<?php 
 				echo anchor(site_url('stok/update/'.$stok->id_stok),'<span class="label label-info">Ubah</span>'); 
