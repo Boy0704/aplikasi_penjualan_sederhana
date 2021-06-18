@@ -167,7 +167,7 @@ table.shoping-cart-table tr td:last-child {
                                 if ($q <> '')
                                 {
                                     ?>
-                                    <a href="<?php echo site_url('produk'); ?>" class="btn btn-default">Reset</a>
+                                    <a href="<?php echo site_url('produk').'?'.param_get(); ?>" class="btn btn-default">Reset</a>
                                     <?php
                                 }
                             ?>
