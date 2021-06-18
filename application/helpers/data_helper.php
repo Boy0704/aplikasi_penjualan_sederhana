@@ -184,7 +184,7 @@ function kode_urut()
 {
 	error_reporting(0);
 	$CI =& get_instance();
-	$CI->db->order_by('tanggal', 'desc');
+	$CI->db->order_by('no_trx', 'desc');
 	$no_trx = $CI->db->get('penjualan')->row()->no_trx;
 	$urutan = (int) substr($no_trx, 3,3);
 	$urutan++;
