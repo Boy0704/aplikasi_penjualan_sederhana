@@ -184,13 +184,12 @@ function kode_urut()
 {
 	error_reporting(0);
 	$CI =& get_instance();
-	$CI->db->like('create_at', date('Y-m-d'), 'AFTER');
-	$CI->db->order_by('no_antrian', 'desc');
-	$no_antrian = $CI->db->get('antrian')->row()->no_antrian;
-	$urutan = (int) substr($no_antrian, 3,3);
+	$CI->db->order_by('tanggal', 'desc');
+	$no_trx = $CI->db->get('penjualan')->row()->no_trx;
+	$urutan = (int) substr($no_trx, 3,3);
 	$urutan++;
 
-	$huruf = "ANT";
+	$huruf = "TRX";
 	$kode = $huruf. sprintf("%03s", $urutan);
 
 	return $kode;
