@@ -1,5 +1,26 @@
 <?php 
 
+function total_stok_habis()
+{
+	$CI =& get_instance();
+	$sql = $CI->db->query("SELECT count(qty) as qty FROM stok where qty < 5");
+	return $sql->row()->qty;
+}
+
+function total_pengeluaran()
+{
+	$CI =& get_instance();
+	$sql = $CI->db->query("SELECT SUM(biaya) as biaya FROM pengeluaran");
+	return $sql->row()->biaya;
+}
+
+function total_pendapatan()
+{
+	$CI =& get_instance();
+	$sql = $CI->db->query("SELECT SUM(subtotal) as subtotal FROM penjualan");
+	return $sql->row()->subtotal;
+}
+
 function time_since($timestamp)
 {
 	date_default_timezone_set('Asia/Jakarta');

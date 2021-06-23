@@ -45,7 +45,7 @@
           </ul>
         </li>
 
-        <li><a href="Laporan"><i class="fa fa-print"></i> <span> Laporan </span></a></li></li>
+        <li><a href="App/laporan"><i class="fa fa-print"></i> <span> Laporan </span></a></li></li>
 
         
         <li><a href="a_user"><i class="fa fa-users"></i> <span>Manajemen Users </span></a></li>

@@ -21,6 +21,28 @@ class App extends CI_Controller {
 		$this->load->view('v_index', $data);
     }
 
+    public function laporan()
+    {
+        if ($this->session->userdata('level') == '') {
+            redirect('login');
+        }
+        
+        $data = array(
+            'konten' => 'laporan',
+            'judul_page' => 'Laporan',
+        );
+        $this->load->view('v_index', $data);
+    }
+
+    public function cetak_laporan()
+    {
+        if ($this->session->userdata('level') == '') {
+            redirect('login');
+        }
+        
+        $this->load->view('cetak_laporan');
+    }
+
     
 
 }

@@ -199,7 +199,7 @@ table.shoping-cart-table tr td:last-child {
                     <div class="ibox-content product-box">
                         <a href="#" class="product-name"> <?php echo $produk->nama_produk ?></a>
                         <div class="product-imitation">
-                            <img src="image/produk/<?php echo $produk->foto ?>" width="100%">
+                            <img class="img img-responsive" src="image/produk/<?php echo $produk->foto ?>">
                         </div>
                         <div class="product-desc">
                             <span class="product-qty">
