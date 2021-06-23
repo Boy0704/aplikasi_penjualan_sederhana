@@ -12,6 +12,19 @@ class Stok extends CI_Controller
         $this->load->library('form_validation');
     }
 
+    public function stok_habis()
+    {
+        if ($this->session->userdata('level') == '') {
+            redirect('login');
+        }
+
+        $data = array(
+            'konten' => 'stok/stok_habis',
+            'judul_page' => 'Stok mau habis',
+        );
+        $this->load->view('v_index', $data);
+    }
+
     public function index()
     {
         $q = urldecode($this->input->get('q', TRUE));
