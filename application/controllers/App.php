@@ -39,8 +39,36 @@ class App extends CI_Controller {
         if ($this->session->userdata('level') == '') {
             redirect('login');
         }
+            
+        if ($_POST) {
+            $tgl1 = $this->input->post('tgl1');
+            $tgl2 = $this->input->post('tgl2');
+            $kategori = $this->input->post('kategori');
+
+            $data = array(
+                'tgl1' => $tgl1,
+                'tgl2' => $tgl2,
+                'kategori' => $kategori,
+            );
+
+            $this->load->view('cetak_laporan', $data);
+
+
+        }
+
         
-        $this->load->view('cetak_laporan');
+    }
+
+    public function cetak_all()
+    {
+        if ($this->session->userdata('level') == '') {
+            redirect('login');
+        }
+            
+        
+        $this->load->view('cetak_all');
+
+        
     }
 
     
